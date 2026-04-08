@@ -1,172 +1,215 @@
-<!-- 🔥 DUPLICAÇÃO ESTRATÉGICA DE CONTEÚDO (ADICIONE ABAIXO DO HERO) -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deus Revela o Caminho Certo | A Jornada da Sabedoria Divina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #121212;
+            --gold: #d4af37;
+            --gold-light: #f1d592;
+            --text-main: #eae0c8;
+            --text-muted: #a0a0a0;
+            --accent: #1a1a1a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'EB Garamond', serif;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 25px; }
+        
+        /* Barra de Progresso */
+        .progress-container {
+            position: fixed; top: 0; z-index: 1000; width: 100%; height: 6px;
+            background: rgba(255,255,255,0.05);
+        }
+        .progress-bar { height: 6px; background: var(--gold); width: 0%; }
 
-<!-- =========================
-CAPÍTULO 1 — A CONFUSÃO
-========================= -->
-<section class="content-block">
-    <div class="container">
-        <h2>Capítulo 1: Quando Tudo Fica Confuso</h2>
+        /* Hero Extensa */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+            url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80&w=1920') center/cover;
+            padding: 100px 20px;
+        }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 5rem); }
+        .hero p { font-size: 1.6rem; font-style: italic; max-width: 700px; margin: 0 auto 40px; }
 
-        <p class="narrative-p">
-            Existe um momento na vida em que pensar demais deixa de ajudar… e começa a atrapalhar.
-        </p>
+        /* Blocos de Texto Densos */
+        .section-long { padding: 100px 0; border-bottom: 1px solid rgba(212,175,55,0.1); }
+        .p-dense { font-size: 1.4rem; margin-bottom: 18px; text-align: justify; }
+        .highlight-gold { color: var(--gold); font-weight: 600; }
+        
+        /* Box de Impacto */
+        .quote-box {
+            background: rgba(212, 175, 55, 0.04);
+            border-left: 3px solid var(--gold);
+            padding: 50px; margin: 60px 0;
+            font-style: italic; font-size: 1.8rem; line-height: 1.3;
+        }
 
-        <p class="narrative-p">
-            Você tenta entender. Tenta decidir. Tenta fazer o certo.
-            Mas quanto mais você pensa… mais distante parece a resposta.
-        </p>
+        .image-wide {
+            width: 100%; height: 500px; object-fit: cover;
+            margin: 60px 0; filter: sepia(0.3) brightness(0.7);
+            border: 1px solid var(--gold);
+        }
 
-        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=1400" class="image-full">
+        /* Comparação e Listas */
+        .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 60px 0; }
+        .comp-card { background: var(--bg-card); padding: 30px; border: 1px solid var(--accent); }
+        .comp-card h4 { font-size: 1.2rem; margin-bottom: 20px; }
+        
+        .cta-box {
+            background: linear-gradient(145deg, #121212, #050505);
+            border: 2px solid var(--gold); padding: 80px 40px;
+            text-align: center; margin: 100px 0;
+        }
+        .btn-divine {
+            display: inline-block; padding: 25px 60px; background: var(--gold);
+            color: #000; text-decoration: none; font-family: 'Inter', sans-serif;
+            font-weight: 900; letter-spacing: 2px; transition: 0.3s; margin-top: 30px;
+        }
+        .btn-divine:hover { background: var(--gold-light); transform: scale(1.05); }
 
-        <p class="narrative-p">
-            É como estar perdido… mesmo estando parado.
-        </p>
+        footer { padding: 80px 0; text-align: center; border-top: 1px solid var(--accent); opacity: 0.6; }
 
-        <div class="quote-box">
-            "A confusão não é ausência de resposta… é excesso de tentativa humana."
+        @media (max-width: 768px) {
+            .comparison { grid-template-columns: 1fr; }
+            .p-dense { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>O Silêncio que Precede a Direção Divina</h1>
+            <p>"Aqueles que esperam no Senhor renovam as suas forças."</p>
+            <a href="#solucao" class="btn-divine">QUERO CLAREZA AGORA</a>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- =========================
-CAPÍTULO 2 — A BUSCA
-========================= -->
-<section class="content-block" style="background:#080808;">
-    <div class="container">
-        <h2>Capítulo 2: A Busca por Respostas</h2>
+    <section class="section-long">
+        <div class="container">
+            <h2>Capítulo I: O Peso da Incerteza</h2>
+            <p class="p-dense">Você acorda e o pensamento é o mesmo. A decisão que você precisa tomar está lá, sentada na beira da sua cama, esperando por uma resposta que você ainda não tem. Você olha para os lados, analisa os fatos, projeta as consequências, mas o cenário parece um quebra-cabeça onde as peças insistem em não se encaixar.</p>
+            <p class="p-dense">Existe uma exaustão silenciosa que nasce quando a mente tenta resolver problemas que pertencem ao espírito. Você já percebeu que, quanto mais você racionaliza, mais a paz se afasta? É como se a lógica humana fosse um mapa antigo tentando guiar você por um território que muda a cada segundo.</p>
+            <p class="p-dense">A incerteza não é apenas a falta de uma resposta; é uma névoa que se infiltra em todas as áreas da sua vida. Ela rouba o seu sono, drena sua energia criativa e faz com que momentos que deveriam ser de alegria se tornem nublados pela preocupação constante com o amanhã. O peso de "e se eu errar?" é maior do que o peso da própria decisão.</p>
+            
+            <div class="quote-box">
+                "A ansiedade é o sussurro da nossa autossuficiência tentando ocupar o lugar da providência divina."
+            </div>
 
-        <p class="narrative-p">
-            Então você começa a buscar.
-        </p>
-
-        <p class="narrative-p">
-            Vídeos… conselhos… opiniões… lógica… comparação…
-        </p>
-
-        <p class="narrative-p">
-            Mas nada disso traz paz.
-        </p>
-
-        <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&q=80&w=1400" class="image-full">
-
-        <p class="narrative-p highlight">
-            Porque o que você precisa não é mais informação… é direção.
-        </p>
-
-        <div class="quote-box">
-            "Existe um ponto em que aprender mais… não resolve. Só Deus resolve."
+            <p class="p-dense">Você busca conselhos. Ouve amigos, lê livros, assiste vídeos. E, embora todos tenham boas intenções, cada nova opinião parece adicionar mais uma camada de confusão. No final do dia, você está cercado de ruído, mas a voz que você realmente precisa ouvir — a voz da paz — continua abafada por esse barulho externo e interno.</p>
+            <p class="p-dense">Talvez você esteja se perguntando: "Por que Deus não fala logo?". Por que parece que, nos momentos de maior urgência, o Céu decide fazer silêncio? É aqui que a maioria de nós desiste e toma decisões baseadas no medo ou na pressa, apenas para descobrir, meses depois, que o caminho escolhido não levava ao destino prometido.</p>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- =========================
-CAPÍTULO 3 — O SILÊNCIO
-========================= -->
-<section class="content-block">
-    <div class="container">
-        <h2>Capítulo 3: O Silêncio de Deus</h2>
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=1200" class="image-wide">
 
-        <p class="narrative-p">
-            E então vem o silêncio…
-        </p>
-
-        <p class="narrative-p">
-            Você ora… e nada acontece.
-        </p>
-
-        <p class="narrative-p">
-            Mas e se esse silêncio não for ausência?
-        </p>
-
-        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=1400" class="image-full">
-
-        <div class="quote-box">
-            "O silêncio de Deus não significa que Ele não está falando… significa que você ainda não aprendeu a ouvir."
+    <section class="section-long" style="background: #080808;">
+        <div class="container">
+            <h2>Capítulo II: Por que o medo paralisa?</h2>
+            <p class="p-dense">O medo de errar é, na verdade, o medo de ser abandonado pelas consequências. Temos medo de que, se escolhermos a porta errada, Deus nos deixará lidar com o erro sozinhos. Mas a sabedoria divina não funciona como um teste de múltipla escolha onde você é reprovado por uma falha de julgamento.</p>
+            <p class="p-dense">A dúvida prospera no solo da desconexão. Quando paramos de ver a decisão como um evento isolado e passamos a vê-la como parte de uma jornada guiada, o peso diminui. A confusão que você sente agora é o sinal de que sua alma está tentando discernir algo que os seus olhos naturais ainda não podem ver.</p>
+            <p class="p-dense highlight-gold">A névoa não serve para te perder, mas para te fazer diminuir o passo e segurar com mais força na mão de quem conhece o caminho.</p>
+            <p class="p-dense">Imagine um navio em meio a uma tempestade. Se o capitão decidir acelerar apenas para sair logo dali, as chances de colisão são imensas. A sabedoria ensina que, em tempos de visibilidade zero, a melhor ação é alinhar a bússola e esperar o sinal do farol. Você é esse capitão, e o farol já está aceso — você apenas precisa aprender a identificar o seu brilho entre os relâmpagos.</p>
+            
+            <div class="comparison">
+                <div class="comp-card">
+                    <h4>Decisão por Impulso</h4>
+                    <p>Baseada em alívio imediato, gera arrependimento tardio e uma sensação de vazio após a escolha.</p>
+                </div>
+                <div class="comp-card">
+                    <h4>Decisão por Sabedoria</h4>
+                    <p>Pode demorar mais a ser tomada, mas traz uma paz inabalável que confirma: "Este é o caminho".</p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- =========================
-CAPÍTULO 4 — A ENTREGA
-========================= -->
-<section class="content-block" style="background:#080808;">
-    <div class="container">
-        <h2>Capítulo 4: Quando Você Para de Controlar</h2>
+    <section class="section-long">
+        <div class="container">
+            <h2>Capítulo III: O Silêncio Educador</h2>
+            <p class="p-dense">Muitos confundem o silêncio de Deus com ausência ou desinteresse. No entanto, na pedagogia do Reino, o silêncio é uma ferramenta de preparação. É no silêncio que o ruído das nossas vontades egoístas começa a baixar de volume, permitindo que a vontade soberana de Deus encontre espaço para ressoar.</p>
+            <p class="p-dense">Pense em uma semente sob a terra. No escuro e no silêncio, parece que nada está acontecendo. Mas é exatamente ali que a vida está se organizando para romper a superfície. Se você tentar forçar a semente a brotar antes do tempo, você a mata. Da mesma forma, forçar uma decisão sem a paz de Deus é abortar um processo de amadurecimento que você precisa viver.</p>
+            <p class="p-dense">A sabedoria não é um download instantâneo; é um cultivo. Você não "consegue" sabedoria apenas pedindo, você a desenvolve caminhando com quem é a própria Sabedoria. As decisões difíceis que você enfrenta hoje são os exercícios necessários para fortalecer os seus "músculos espirituais" para o que virá amanhã.</p>
+            
+            <div class="quote-box">
+                "Deus nunca está com pressa, mas Ele nunca chega atrasado. O tempo d'Ele é a proteção do nosso destino."
+            </div>
 
-        <p class="narrative-p">
-            A mudança começa aqui…
-        </p>
-
-        <p class="narrative-p">
-            Quando você para de tentar resolver tudo sozinho.
-        </p>
-
-        <p class="narrative-p">
-            E diz:
-        </p>
-
-        <div class="quote-box" style="text-align:center;">
-            "Deus… eu não sei. Mas eu confio."
+            <p class="p-dense">Talvez o que você chame de "travamento" seja, na verdade, um bloqueio de segurança. Deus muitas vezes fecha portas ou coloca uma "pausa" na nossa vida não para nos punir, mas para impedir que entremos em um ciclo de dor que Ele já previu. Aprender a ler esses sinais é a diferença entre uma vida de lutas vãs e uma vida de conquistas sólidas.</p>
         </div>
+    </section>
 
-        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&q=80&w=1400" class="image-full">
-    </div>
-</section>
+    <section class="section-long" style="background: #0d0d0d;">
+        <div class="container">
+            <h2>Capítulo IV: O Filtro da Paz Inexplicável</h2>
+            <p class="p-dense">Como saber se é Deus ou apenas sua cabeça? A lógica pode te convencer de mil caminhos, mas apenas o Espírito de Deus pode te dar a paz que "excede todo o entendimento". Essa paz não é a ausência de problemas; é a presença de uma certeza que desafia as circunstâncias ao seu redor.</p>
+            <p class="p-dense">Se uma decisão parece "certa" no papel, mas rouba a sua paz interior, pare. A paz é o árbitro do seu coração. Se o árbitro apitou, não importa o quão bonita a jogada pareça, ela é inválida. A sabedoria divina nunca te levará para um lugar onde a sua alma seja sacrificada no altar da conveniência ou do status.</p>
+            <p class="p-dense">Muitas vezes, o caminho certo é o que exige mais coragem, mas é também o que traz o sono mais tranquilo. Decidir com Deus significa trocar o controle pela confiança. É admitir que você não enxerga o quadro todo, mas confia plenamente no Pintor.</p>
+            
+            <p class="p-dense highlight-gold" style="text-align:center; font-size: 2rem; margin: 40px 0;">O que acontece quando você finalmente decide do jeito certo?</p>
 
-<!-- =========================
-CAPÍTULO 5 — A SABEDORIA
-========================= -->
-<section class="content-block">
-    <div class="container">
-        <h2>Capítulo 5: A Sabedoria Que Vem do Alto</h2>
-
-        <p class="narrative-p">
-            A sabedoria de Deus não grita…
-        </p>
-
-        <p class="narrative-p">
-            Ela traz paz.
-        </p>
-
-        <p class="narrative-p">
-            Ela não pressiona… ela alinha.
-        </p>
-
-        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1400" class="image-full">
-
-        <div class="quote-box">
-            "Se não traz paz… não vem de Deus."
+            <p class="p-dense">As portas começam a se abrir sem que você precise esmurrá-las. As pessoas certas aparecem. Os recursos necessários se manifestam. Mas, acima de tudo, você sente uma leveza. Aquele peso nas costas desaparece, porque agora a responsabilidade pelo resultado não está apenas nos seus ombros, mas nas mãos Daquele que sustenta o universo.</p>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- =========================
-CAPÍTULO 6 — A REVELAÇÃO
-========================= -->
-<section class="content-block" style="background:#080808;">
-    <div class="container">
-        <h2>Capítulo Final: O Caminho Revelado</h2>
+    <section class="section-long" id="solucao">
+        <div class="container">
+            <h2>Capítulo V: A Ferramenta para o Seu Próximo Passo</h2>
+            <p class="p-dense">Eu sei que você quer essa paz. Eu sei que você está cansado de dar voltas no mesmo deserto. Por isso, compilei princípios bíblicos milenares e estratégias práticas de discernimento em um material desenhado para ser o seu farol neste momento de névoa.</p>
+            
+            <div class="cta-box">
+                <h3>A Cartilha da Sabedoria Divina</h3>
+                <p style="margin-bottom: 25px; font-style: italic;">O método prático para ouvir a Deus e decidir com segurança total.</p>
+                <ul style="list-style: none; text-align: left; max-width: 500px; margin: 0 auto; font-size: 1.2rem;">
+                    <li style="margin-bottom: 15px;">✨ <strong>O Teste da Paz:</strong> Como identificar se a voz que você ouve é divina ou emocional.</li>
+                    <li style="margin-bottom: 15px;">🛡️ <strong>Blindagem de Decisões:</strong> Proteja-se de influências externas e pressões sociais.</li>
+                    <li style="margin-bottom: 15px;">⏳ <strong>O Tempo de Deus:</strong> Saiba exatamente quando acelerar e quando esperar o sinal verde.</li>
+                    <li style="margin-bottom: 15px;">📖 <strong>Mapas Bíblicos:</strong> Lições de quem decidiu com sabedoria (e de quem falhou miseravelmente).</li>
+                </ul>
+                <a href="#" class="btn-divine">QUERO MINHA CARTILHA AGORA</a>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-muted);">Acesso imediato para transformar sua confusão em clareza.</p>
+            </div>
 
-        <p class="narrative-p">
-            Você não precisa continuar vivendo assim…
-        </p>
-
-        <p class="narrative-p">
-            Confuso. Cansado. Travado.
-        </p>
-
-        <p class="narrative-p highlight">
-            Existe um caminho. E ele pode ser revelado.
-        </p>
-
-        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&q=80&w=1400" class="image-full">
-
-        <div class="quote-box">
-            "Deus não esconde o caminho… Ele revela no tempo certo."
+            <p class="p-dense">Não é sobre comprar um livro. É sobre investir no seu próximo nível de maturidade espiritual. Imagine como será sua vida daqui a um mês, quando você olhar para trás e ver que a decisão que hoje te atormenta foi o degrau que te levou para uma nova estação de bençãos.</p>
+            <p class="p-dense">O silêncio está acabando. A direção está batendo à sua porta. A única pergunta é: você está pronto para parar de tentar controlar e começar a seguir?</p>
         </div>
+    </section>
 
-        <div style="text-align:center;">
-            <a href="#cta" class="btn-divine">RECEBER DIREÇÃO AGORA</a>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Deus Revela o Caminho Certo. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px;">A sabedoria é o melhor investimento que alguém pode fazer.</p>
         </div>
-    </div>
-</section>
+    </footer>
+
+    <script>
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        };
+    </script>
+
+</body>
+</html>
