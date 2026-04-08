@@ -1,188 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Decida com Paz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decida com Paz</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+<style>
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+}
 
-    body {
-      background: #0b0b0f;
-      color: #fff;
-      line-height: 1.6;
-    }
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
 
-    h1 {
-      font-size: 48px;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 10px;
-    }
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
+}
 
-    h2 {
-      font-size: 24px;
-      text-align: center;
-      color: #aaa;
-      margin-bottom: 40px;
-    }
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
 
-    p {
-      margin-bottom: 16px;
-      font-size: 18px;
-      color: #ddd;
-    }
+.hero p {
+  color: #c7a86c;
+  font-size: 20px;
+}
 
-    .highlight {
-      color: #7c5cff;
-      font-weight: 600;
-    }
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background: #c7a86c;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+}
 
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-    }
+.section {
+  margin: 80px 0;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 18px 32px;
-      background: linear-gradient(135deg, #7c5cff, #9f7fff);
-      color: #fff;
-      font-weight: bold;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+.image-full img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-    }
+.card {
+  background: #111;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
 
-    .section {
-      margin: 80px 0;
-    }
+.gold {
+  color: #c7a86c;
+}
 
-    .card {
-      background: #14141c;
-      padding: 30px;
-      border-radius: 16px;
-      margin-bottom: 20px;
-    }
+.list li {
+  margin-bottom: 10px;
+}
 
-    .list li {
-      margin-bottom: 10px;
-    }
+.center {
+  text-align: center;
+}
 
-    .image {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .image img {
-      max-width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(124,92,255,0.3);
-    }
-
-    .footer {
-      text-align: center;
-      color: #777;
-      margin-top: 80px;
-      font-size: 14px;
-    }
-  </style>
+.footer {
+  text-align: center;
+  color: #777;
+  margin: 60px 0;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<!-- HERO -->
+<section class="hero">
+  <h1>Decida com Paz</h1>
+  <p>Você não está perdido… só precisa de direção</p>
+  <a href="#" class="btn">QUERO SABEDORIA AGORA</a>
+</section>
 
-    <!-- HERO -->
-    <section class="hero">
-      <h1>Decida com Paz</h1>
-      <h2>Receba a sabedoria de Deus para tomar decisões sem medo e sem confusão</h2>
+<div class="container">
 
-      <a href="#" class="btn">QUERO DECIDIR COM PAZ</a>
-    </section>
+<!-- INTRO -->
+<section class="section center">
+  <h2>Essa pode ser a decisão que muda tudo</h2>
+  <p>Você já pensou demais… e mesmo assim não encontrou resposta?</p>
+</section>
 
-    <!-- DOR -->
-    <section class="section">
-      <p>Você já pensou demais… e mesmo assim não chegou a lugar nenhum?</p>
-      <p>A mente não para. O coração aperta. E a paz simplesmente não vem.</p>
-      <p>Você quer fazer o certo… mas tem medo de escolher errado.</p>
-      <p><span class="highlight">E isso está te travando.</span></p>
-    </section>
+<!-- IMAGEM 1 -->
+<div class="image-full">
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+</div>
 
-    <!-- QUEBRA -->
-    <section class="section card">
-      <p><strong>O problema não é falta de inteligência.</strong></p>
-      <p>É tentar resolver decisões espirituais com lógica humana.</p>
-      <p>Nem tudo pode ser decidido pensando.</p>
-      <p><span class="highlight">Algumas decisões precisam ser discernidas.</span></p>
-    </section>
+<section class="section">
+  <p>A mente gira… o coração aperta… e a paz não vem.</p>
+  <p>Você quer fazer o certo, mas tem medo de errar.</p>
+  <p class="gold">E isso está te travando.</p>
+</section>
 
-    <!-- REVELAÇÃO -->
-    <section class="section">
-      <p>O que você precisa não é pensar mais.</p>
-      <p>É receber sabedoria.</p>
-      <p>E quando a decisão vem de Deus…</p>
-      <p><span class="highlight">ela traz paz.</span></p>
-    </section>
+<!-- IMAGEM 2 -->
+<div class="image-full">
+  <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+</div>
 
-    <!-- IMAGEM PRODUTO -->
-    <div class="image">
-      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Cartilha">
-    </div>
+<section class="section">
+  <h2>Existe algo que você precisa entender</h2>
+  <p>Nem toda decisão pode ser resolvida pensando.</p>
+  <p>Algumas precisam ser discernidas.</p>
+</section>
 
-    <!-- PRODUTO -->
-    <section class="section card">
-      <h2>Cartilha: Decida com Paz</h2>
-      <p>Um guia simples e direto para você aprender a ouvir Deus e tomar decisões com segurança.</p>
-    </section>
+<!-- IMAGEM 3 -->
+<div class="image-full">
+  <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94">
+</div>
 
-    <!-- BENEFÍCIOS -->
-    <section class="section">
-      <ul class="list">
-        <li>✔ Como saber se é Deus ou emoção</li>
-        <li>✔ Como parar de viver travado</li>
-        <li>✔ Como tomar decisões com paz</li>
-        <li>✔ Como ouvir Deus mesmo no silêncio</li>
-        <li>✔ Como evitar decisões erradas</li>
-      </ul>
-    </section>
+<section class="section">
+  <p>O que você precisa não é mais informação.</p>
+  <p class="gold">É sabedoria.</p>
+</section>
 
-    <!-- TRANSFORMAÇÃO -->
-    <section class="section card">
-      <p><strong>Antes:</strong> Confusão, medo, pressão</p>
-      <p><strong>Depois:</strong> Clareza, paz e direção</p>
-    </section>
+<!-- PRODUTO -->
+<section class="section card center">
+  <h2>Cartilha: Decida com Paz</h2>
+  <p>Um guia espiritual para te ensinar a tomar decisões com clareza e segurança.</p>
+</section>
 
-    <!-- CTA FINAL -->
-    <section class="hero">
-      <h1>Você não precisa mais viver confuso</h1>
-      <a href="#" class="btn">QUERO SABEDORIA AGORA</a>
-    </section>
+<!-- BENEFÍCIOS -->
+<section class="section">
+  <h2 class="center">O que você vai aprender</h2>
+  <ul class="list">
+    <li>✔ Como ouvir Deus no silêncio</li>
+    <li>✔ Como saber se é emoção ou direção</li>
+    <li>✔ Como tomar decisões com paz</li>
+    <li>✔ Como evitar escolhas erradas</li>
+  </ul>
+</section>
 
-    <div class="footer">
-      © 2026 - Todos os direitos reservados
-    </div>
+<!-- IMAGEM 4 -->
+<div class="image-full">
+  <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+</div>
 
-  </div>
+<section class="section">
+  <h2 class="center">A sabedoria protege você</h2>
+  <p>Quantas decisões você já quase tomou… e algo te fez parar?</p>
+  <p class="gold">Isso era direção.</p>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section center">
+  <h2>Você pode continuar confuso…</h2>
+  <h2 class="gold">ou começar a ser guiado</h2>
+
+  <a href="#" class="btn">QUERO DECIDIR COM PAZ</a>
+</section>
+
+</div>
+
+<div class="footer">
+  © 2026 - Todos os direitos reservados
+</div>
 
 </body>
 </html>
