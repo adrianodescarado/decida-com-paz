@@ -1,227 +1,454 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deus Revela o Caminho Certo | A Jornada da Sabedoria Divina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #121212;
+            --gold: #d4af37;
+            --gold-light: #f1d592;
+            --text-main: #eae0c8;
+            --text-muted: #a0a0a0;
+            --accent: #1a1a1a;
+        }
 
-<title>Decida com Paz</title>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+        html {
+            scroll-behavior: smooth;
+        }
 
-<style>
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'EB Garamond', serif;
+            line-height: 1.6; /* Espaçamento mais próximo para leitura densa */
+            overflow-x: hidden;
+        }
 
-body {
-  margin: 0;
-  background: #0a0a0a;
-  color: #eae0c8;
-  font-family: 'EB Garamond', serif;
-}
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
 
-/* HERO */
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.95)),
-  url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+        /* Progress Bar */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.05);
+        }
 
-.hero h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 42px;
-  color: #d4af37;
-}
+        .progress-bar {
+            height: 4px;
+            background: var(--gold);
+            width: 0%;
+        }
 
-.hero p {
-  font-size: 20px;
-  margin-top: 15px;
-}
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
+                        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80&w=1920') center/cover;
+            position: relative;
+        }
 
-.btn {
-  margin-top: 30px;
-  display: inline-block;
-  padding: 14px 28px;
-  background: #d4af37;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+            padding: 40px;
+        }
 
-/* SECTIONS */
-.section {
-  margin: 80px 0;
-}
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 20px;
+        }
 
-h2 {
-  font-family: 'Cinzel', serif;
-  color: #d4af37;
-  text-align: center;
-  margin-bottom: 20px;
-}
+        .hero p {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-style: italic;
+            margin-bottom: 40px;
+            color: var(--text-main);
+        }
 
-p {
-  font-size: 18px;
-  line-height: 1.7;
-  text-align: center;
-}
+        /* Content Blocks */
+        .content-block {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.05);
+        }
 
-/* IMAGENS */
-.image img {
-  width: 100%;
-  border-radius: 8px;
-  margin: 30px 0;
-}
+        .narrative-p {
+            font-size: 1.45rem;
+            margin-bottom: 15px; /* Parágrafos mais próximos */
+            text-align: justify;
+            color: var(--text-main);
+        }
 
-/* CARDS */
-.card {
-  background: #111;
-  border: 1px solid #2a2a2a;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
+        .narrative-p.center {
+            text-align: center;
+        }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
+        .narrative-p.highlight {
+            color: var(--gold-light);
+            font-weight: 500;
+        }
 
-.small-card {
-  background: #111;
-  padding: 15px;
-  border-radius: 6px;
-}
+        /* Special Elements */
+        .quote-box {
+            background: rgba(212, 175, 55, 0.03);
+            border-left: 4px solid var(--gold);
+            padding: 40px;
+            margin: 50px 0;
+            font-style: italic;
+            font-size: 1.7rem;
+            color: var(--gold-light);
+            line-height: 1.4;
+        }
 
-/* CTA */
-.cta {
-  text-align: center;
-  padding: 60px 20px;
-  background: #0d0d0d;
-}
+        .divider {
+            width: 100px;
+            height: 1px;
+            background: var(--gold);
+            margin: 60px auto;
+            opacity: 0.3;
+        }
 
-.footer {
-  text-align: center;
-  padding: 40px;
-  color: #777;
-}
+        .image-full {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: cover;
+            margin: 50px 0;
+            border: 1px solid var(--accent);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
 
-</style>
+        /* Lists and Grids */
+        .check-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .check-list li {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .check-list li::before {
+            content: '✔';
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .check-list.negative li::before {
+            content: '❌';
+        }
+
+        .matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .matrix-card {
+            background: var(--bg-card);
+            padding: 40px;
+            border: 1px solid var(--accent);
+        }
+
+        .matrix-card h4 {
+            text-align: left;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Product & CTA */
+        .product-highlight {
+            border: 2px solid var(--gold);
+            padding: 60px 40px;
+            margin: 80px 0;
+            background: rgba(212, 175, 55, 0.02);
+            text-align: center;
+        }
+
+        .btn-divine {
+            display: inline-block;
+            padding: 25px 70px;
+            background: var(--gold);
+            color: #000;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            margin-top: 30px;
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-divine:hover {
+            background: var(--gold-light);
+            transform: translateY(-5px);
+        }
+
+        footer {
+            padding: 100px 0;
+            text-align: center;
+            background: #050505;
+            border-top: 1px solid var(--accent);
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .matrix { grid-template-columns: 1fr; }
+            .narrative-p { font-size: 1.2rem; }
+            .quote-box { font-size: 1.4rem; padding: 25px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Decida com Paz</h1>
-    <p>E se a sua pior fase fosse o começo da sua direção?</p>
-    <a href="#" class="btn">QUERO SABEDORIA</a>
-  </div>
-</section>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
 
-<div class="container">
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Deus Revela o Caminho Certo</h1>
+            <p>Você não está perdido… Você só ainda não recebeu a direção que Deus já preparou para você.</p>
+            <a href="#cta" class="btn-divine">Quero Receber Sabedoria</a>
+        </div>
+    </section>
 
-<!-- INTRO -->
-<section class="section">
-  <h2>Uma decisão pode mudar tudo</h2>
-  <p>Você já tentou entender o caminho… mas tudo parece encoberto?</p>
-</section>
+    <!-- ATO 1: O DESPERTAR DA CONSCIÊNCIA -->
+    <section class="content-block">
+        <div class="container">
+            <h2>Você já se sentiu assim?</h2>
+            <p class="narrative-p">Como se estivesse tentando decidir algo importante… Mas quanto mais pensa, mais confuso tudo fica? A mente não para. O coração aperta. E a paz simplesmente não vem.</p>
+            <p class="narrative-p">É como caminhar em meio a um nevoeiro… Você olha para frente… Mas não consegue enxergar o caminho. E o pior não é não saber o que fazer. É o medo de escolher errado.</p>
+            
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=1200" alt="Névoa" class="image-full">
 
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-</div>
+            <p class="narrative-p">Você ora… Mas o silêncio parece maior que a resposta. Você pensa… Mas cada pensamento vira um peso. Você tenta usar lógica… Mas a alma continua inquieta. E no fundo, o que você quer não é mais informação. É direção. Uma certeza. Uma paz que diga: 👉 <strong>“É por aqui.”</strong></p>
+            
+            <div class="quote-box">
+                "Existe algo que talvez ninguém tenha te explicado ainda… Você não está perdido. Você só está tentando decidir sozinho."
+            </div>
 
-<section class="section">
-  <p>A mente gira… o coração pesa… e a direção não vem.</p>
-  <p>Você quer fazer o certo… mas teme errar.</p>
-</section>
+            <p class="narrative-p">Me responde com sinceridade: Quantas vezes você já pensou demais… e mesmo assim não chegou a lugar nenhum? Você analisa, reflete, ora, tenta entender… mas quanto mais você tenta resolver, mais confuso tudo fica.</p>
+            <p class="narrative-p">E aí vem aquela sensação de estar travado. Sem saber se avança… sem saber se espera… sem saber se muda tudo ou continua onde está. E o pior de tudo… é o medo de errar. Porque não é só uma decisão qualquer, né? Você quer fazer o certo. Quer agradar a Deus. Quer escolher o caminho certo.</p>
+        </div>
+    </section>
 
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
-</div>
+    <!-- ATO 2: A NÉVOA E O MEDO -->
+    <section class="content-block" style="background: #080808;">
+        <div class="container">
+            <h2>A Névoa da Dúvida</h2>
+            <p class="narrative-p">Mas… e se você errar? E se essa decisão te afastar do que era pra ser? Esse tipo de pensamento paralisa. E talvez seja exatamente por isso que você não consegue sair do lugar. Porque sua mente está cheia… mas sua alma continua sem direção.</p>
+            
+            <p class="narrative-p highlight">Deus vai te dar direção.</p>
+            
+            <p class="narrative-p">Você já percebeu como, às vezes, quanto mais você pensa… mais confuso tudo fica? Você tenta entender, tenta fazer o certo, tenta ouvir a voz de Deus… mas parece que nada fica claro. É como se existisse uma névoa na sua frente. Você olha para o futuro… mas não consegue enxergar o caminho.</p>
+            
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=1200" alt="Caminho" class="image-full">
 
-<!-- GRID -->
-<div class="grid">
-  <div class="small-card">Confusão nas decisões</div>
-  <div class="small-card">Medo de errar</div>
-  <div class="small-card">Falta de paz</div>
-  <div class="small-card">Pressão interna</div>
-</div>
+            <p class="narrative-p">E o pior não é nem a dúvida. É o medo. Medo de escolher errado. Medo de sair do propósito. Medo de tomar uma decisão hoje… e se arrepender amanhã. E enquanto isso, sua mente não para. Pensamentos vêm, vão, se contradizem… e o coração? Só fica mais apertado.</p>
+            
+            <div class="quote-box">
+                "Você ora… mas o silêncio pesa. Você pensa… mas não encontra paz. E lá no fundo, o que você mais queria… era só uma confirmação. Uma direção simples. Uma paz que dissesse: 'é por aqui'."
+            </div>
+        </div>
+    </section>
 
-<section class="section">
-  <h2>5 lições que mudam tudo</h2>
-</section>
+    <!-- ATO 3: O CANSAÇO DA ALMA -->
+    <section class="content-block">
+        <div class="container">
+            <h2>O Cansaço da Alma</h2>
+            <p class="narrative-p">Porque viver assim… entre a dúvida e a pressão… cansa. Cansa a mente. Cansa o coração. Cansa a alma. E talvez você esteja exatamente nesse ponto agora. Tentando resolver tudo sozinho. Tentando entender tudo com lógica… quando, na verdade, nem tudo se resolve assim.</p>
+            
+            <p class="narrative-p">Porque existem decisões… que não são racionais. São espirituais. E é por isso que, mesmo quando tudo parece certo por fora… por dentro, algo continua inquieto. Como se a sua alma estivesse dizendo: “isso ainda não é o caminho”.</p>
+            
+            <div class="matrix">
+                <div class="matrix-card">
+                    <h4>Pensamento</h4>
+                    <p>Gera análise excessiva, pesa possibilidades infinitas e acaba gerando peso e cansaço mental.</p>
+                </div>
+                <div class="matrix-card">
+                    <h4>Sabedoria</h4>
+                    <p>Gera direção clara, traz paz profunda e a alma reconhece o caminho sem esforço.</p>
+                </div>
+            </div>
 
-<!-- LIÇÃO 1 -->
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
-</div>
+            <p class="narrative-p">Essa confusão que você sente não significa que você está longe de Deus. Significa que você precisa de algo que vai além da sua própria capacidade. Você precisa de sabedoria que vem do alto. E essa sabedoria… não depende do quanto você sabe. Depende do quanto você confia.</p>
+        </div>
+    </section>
 
-<div class="card">
-  <h2>Você não está perdido</h2>
-  <p>Você só está tentando decidir sozinho.</p>
-</div>
+    <!-- ATO 4: O SILÊNCIO E O PROCESSO -->
+    <section class="content-block" style="background: #080808;">
+        <div class="container">
+            <h2>O Silêncio não é Abandono</h2>
+            <p class="narrative-p">Ela não nasce da pressa. Não vem da ansiedade. Ela surge quando você para de tentar controlar tudo… e começa a se render. Talvez esse silêncio que você está vivendo… não seja ausência de resposta. Talvez seja o início dela.</p>
+            
+            <p class="narrative-p">Porque quando a alma está cansada… até as decisões mais simples parecem pesadas. Tudo vira um peso. Tudo parece arriscado. É como andar em um terreno instável… onde qualquer passo pode dar errado. E então você tenta resolver. Analisa. Compara. Pede opinião. Busca conteúdo. Reflete mais uma vez.</p>
+            
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=1200" alt="Reflexão" class="image-full">
 
-<!-- LIÇÃO 2 -->
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
-</div>
+            <p class="narrative-p">Mas nada disso traz descanso. Porque no fundo… o que você procura não é mais informação. É paz. E existe um ponto na vida em que a gente precisa aceitar: Nem tudo pode ser resolvido com inteligência. Existem caminhos… que só podem ser discernidos espiritualmente.</p>
+            
+            <div class="quote-box">
+                "O silêncio de Deus não é ausência. É processo. Enquanto você acha que nada está acontecendo… Deus está organizando tudo dentro de você. Alinhando seu coração. Ajustando seus pensamentos. Preparando você para decidir certo."
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-  <h2>O silêncio também fala</h2>
-  <p>Nem toda resposta vem em palavras… mas em paz.</p>
-</div>
+    <!-- ATO 5: A VIRADA E A ENTREGA -->
+    <section class="content-block">
+        <div class="container">
+            <h2>O Ponto da Virada</h2>
+            <p class="narrative-p">Porque o coração humano falha. Às vezes a gente acha que está certo… mas está sendo guiado por emoção, medo ou carência. E depois… vem a frustração. Por isso, o primeiro passo não é decidir. É reconhecer: “Eu não sei.” “Eu estou cansado.” “Eu preciso de direção.”</p>
+            
+            <p class="narrative-p">E quando você chega nesse lugar… algo muda. Porque é aí que Deus começa a agir. Não quando você está no controle. Mas quando você solta. Quando você para e diz: “Senhor, me mostra o caminho.”</p>
+            
+            <p class="narrative-p">A verdadeira sabedoria não é só saber o que fazer. É saber quando agir. Quando esperar. E quando simplesmente não fazer nada. E isso… só vem de Deus. Existe uma promessa muito clara: Se você pede sabedoria com sinceridade… Deus responde. Sem te julgar. Sem te rejeitar. Sem te ignorar. Ele responde.</p>
+            
+            <div class="divider"></div>
 
-<!-- LIÇÃO 3 -->
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c55a">
-</div>
+            <p class="narrative-p">Às vezes não com barulho… mas com paz. Uma paz que não faz sentido lógico… mas que acalma tudo dentro de você. Outras vezes, com clareza. Como se, de repente, tudo se organizasse. E você entende… sem esforço. Essa é a marca da direção de Deus. Ela não te empurra. Ela te conduz. Ela não te pressiona. Ela te acalma.</p>
+        </div>
+    </section>
 
-<div class="card">
-  <h2>Nem tudo é lógico</h2>
-  <p>Algumas decisões precisam ser discernidas.</p>
-</div>
+    <!-- ATO 6: A PROTEÇÃO DIVINA -->
+    <section class="content-block" style="background: #080808;">
+        <div class="container">
+            <h2>A Sabedoria que Protege</h2>
+            <p class="narrative-p">E mesmo quando o caminho não é fácil… existe uma certeza por dentro. A sabedoria de Deus não serve só para te guiar. Ela serve para te proteger. Te livrar de decisões erradas. De caminhos que parecem bons… mas não são. De escolhas que poderiam te machucar lá na frente.</p>
+            
+            <p class="narrative-p">Quantas vezes você já foi poupado… e só entendeu depois? Isso é sabedoria em ação. Ela guarda você. Ela te impede de avançar no tempo errado. Ela te faz parar… quando seguir seria um erro. Porque nem toda porta aberta vem de Deus. E nem todo “sim” é direção.</p>
+            
+            <div class="quote-box">
+                "Se não tem paz… pare. Se tem pressa… cuidado. Se tem confusão… não é o momento. A sabedoria de Deus nunca empurra você para o caos. Ela sempre te conduz para a clareza… mesmo que aos poucos."
+            </div>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Você pode continuar confuso…</h2>
-  <h2>ou começar a ser guiado</h2>
+            <p class="narrative-p">Quantas vezes você já quase fez algo… e algo dentro de você travou? Aquilo não era dúvida. Era proteção. Era sabedoria agindo. E é isso que você precisa aprender a reconhecer. Porque quando você aprende a ouvir isso… sua vida muda. Você para de viver no erro e acerto… e começa a viver em direção.</p>
+        </div>
+    </section>
 
-  <a href="#" class="btn">QUERO DECIDIR COM PAZ</a>
-</section>
+    <!-- ATO 7: A SOLUÇÃO E O CAMINHO -->
+    <section class="content-block" id="cta">
+        <div class="container">
+            <h2>A Direção que Você Precisa</h2>
+            <p class="narrative-p">Você não foi criado para decidir tudo sem Deus. O problema não é falta de fé. É tentar viver só com a própria mente. Você foi treinado a pensar demais, controlar tudo e resolver sozinho. Mas Deus não trabalha no controle. 👉 <strong>Ele trabalha na entrega.</strong></p>
+            
+            <div class="product-highlight">
+                <h3>📘 Cartilha: Sabedoria Divina Para Decisões Difíceis</h3>
+                <p class="narrative-p center">Um guia espiritual simples e profundo que vai te ensinar:</p>
+                <ul class="check-list" style="display: inline-block; text-align: left;">
+                    <li>Como ouvir a voz de Deus mesmo no silêncio</li>
+                    <li>Como tomar decisões com paz</li>
+                    <li>Como parar de viver na dúvida</li>
+                    <li>Como desenvolver discernimento espiritual</li>
+                    <li>Como reconhecer quando Deus está te direcionando</li>
+                </ul>
+                <br>
+                <a href="#" class="btn-divine">QUERO RECEBER SABEDORIA AGORA</a>
+            </div>
 
-<!-- PERGUNTAS -->
-<section class="section">
-  <h2>Perguntas que você precisa fazer</h2>
-  <p>Isso me traz paz?</p>
-  <p>Isso vem de Deus… ou da minha emoção?</p>
-</section>
+            <h2>Sua Nova Realidade</h2>
+            <div class="matrix">
+                <div class="matrix-card">
+                    <h4>Antes da Sabedoria</h4>
+                    <ul class="check-list negative">
+                        <li>Ansiedade constante</li>
+                        <li>Dúvidas paralisantes</li>
+                        <li>Medo terrível de errar</li>
+                        <li>Confusão mental</li>
+                    </ul>
+                </div>
+                <div class="matrix-card">
+                    <h4>Depois da Sabedoria</h4>
+                    <ul class="check-list">
+                        <li>Paz que excede entendimento</li>
+                        <li>Clareza sobre o próximo passo</li>
+                        <li>Direção segura e firme</li>
+                        <li>Confiança plena em Deus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="image">
-  <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
-</div>
+    <!-- ATO 8: O FECHAMENTO E A ORAÇÃO -->
+    <section class="content-block" style="background: #0d0d0d; padding-bottom: 150px;">
+        <div class="container">
+            <h2>O Chamado para Algo Maior</h2>
+            <p class="narrative-p">A sabedoria não vem da pressa. Ela nasce da entrega. E talvez… esse momento que você está vivendo não seja confusão… 👉 <strong>Seja Deus te chamando para algo maior.</strong></p>
+            
+            <p class="narrative-p">Por isso, hoje… antes de tentar decidir qualquer coisa… pare. Respire. E faça uma oração simples:</p>
+            
+            <div class="quote-box" style="text-align: center; border: 1px solid var(--gold);">
+                “Deus… eu não sei o que fazer. Mas eu confio que o Senhor sabe. Me dá sabedoria.”
+            </div>
 
-<section class="section">
-  <h2>A história não termina na dúvida</h2>
-  <p>Existe direção. Existe sabedoria. Existe paz.</p>
-</section>
+            <p class="narrative-p center">Isso é suficiente. Porque a partir desse momento… você não está mais sozinho. Você não precisa viver confuso. Você pode viver guiado. Tudo começa de forma simples. Sem fórmula. Sem complicação.</p>
+            
+            <div class="divider"></div>
 
-</div>
+            <p class="narrative-p center" style="font-size: 1.8rem; color: var(--gold-light);">Você pode continuar vivendo em dúvida… com medo… sem direção… Ou pode decidir hoje caminhar com a sabedoria de Deus.</p>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#" class="btn-divine" style="font-size: 1.3rem; padding: 30px 80px;">QUERO CAMINHAR COM SABEDORIA</a>
+            </div>
+            
+            <p class="narrative-p center" style="margin-top: 40px; font-size: 1rem; color: var(--text-muted);">Se você não sentir mais clareza e paz após aplicar o conteúdo… você pode simplesmente desistir. Sem riscos.</p>
+        </div>
+    </section>
 
-<div class="footer">
-  © 2026 - Todos os direitos reservados
-</div>
+    <footer>
+        <div class="container">
+            <h3 style="letter-spacing: 5px; margin-bottom: 20px;">Decida com Paz</h3>
+            <p>&copy; 2026 - Todos os direitos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.5;">Uma jornada completa de entrega, sabedoria e direção divina.</p>
+        </div>
+    </footer>
 
+    <script>
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
 </body>
 </html>
